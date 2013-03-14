@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stdev</title>
+  <title>Startup Development ToolBox</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+    
+    <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <%= link_to "Trictrac", root_path, class: "brand" %>
+                <ul class="nav pull-right">
+                    <li><%= link_to "Sign In", user_session_path %></li>
+                    <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+         
+         <p class="notice"><%= notice %></p>
+         <div class="alert">
+            <%= alert %>
+         </div>
 
-<%= yield %>
 
+    
+    <%= yield %>
+    
+    </div>
 </body>
 </html>

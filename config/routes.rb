@@ -1,5 +1,14 @@
 Stdev::Application.routes.draw do
-   root :to => "home#index"
+  resources :statuses
+
+
+  get "pages/home"
+
+  devise_for :users
+
+  devise_for :admins
+ 
+  root :to => "pages#index"
    
   # The priority is based upon order of creation:
   # first created -> highest priority.
